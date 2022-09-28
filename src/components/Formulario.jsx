@@ -22,9 +22,8 @@ const Formulario = ({setPacientes, pacientes, paciente, setPaciente}) =>{
     }, [paciente])
 
     const generarId = () => {
-        const random =  Math.random.toString(36).substring(2);
+        const random =  Math.random().toString(36).substring(2);
         const fecha = Date.now().toString(36);
-
         return fecha + random;
     }
 
@@ -53,6 +52,7 @@ const Formulario = ({setPacientes, pacientes, paciente, setPaciente}) =>{
                 setPacientes(pacientesActulizados);
                 setPaciente({})
             } else {
+                //Nuevo
                 objetoPaciente.id = generarId();
                 setPacientes([...pacientes,objetoPaciente])
             }
