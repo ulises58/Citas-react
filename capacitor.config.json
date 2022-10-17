@@ -1,0 +1,6 @@
+{
+  "appId": "com.example.app",
+  "appName": "citas-react",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
